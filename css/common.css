@@ -29,7 +29,7 @@
   /*搜尋*/
 }
 .header .container .logo {
-  margin-right: 3.29163924vw;
+  margin-right: 5.92495063vw;
   width: 7.96576695vw;
   height: 5.5957867vw;
 }
@@ -46,27 +46,27 @@
   display: flex;
   margin: 0.59249506vw 4.47662936vw 0.39499671vw 0;
   padding-left: 2.10664911vw;
-  width: 53.25872284vw;
-  height: 4.34496379vw;
+  width: 48.38709677vw;
+  height: 3.94996708vw;
   background-color: #fff;
-  border-radius: 4.34496379vw;
+  border-radius: 3.94996708vw;
 }
 .header .container .search:focus-within {
   border: 2px solid orange;
   /* 設定聚焦時的邊框顏色 */
 }
 .header .container .search form input {
-  width: 38.64384463vw;
-  height: 4.34496379vw;
+  width: 33.57472021vw;
+  height: 3.94996708vw;
   background-color: transparent;
-  line-height: 4.34496379vw;
+  line-height: 4.21329822vw;
 }
 .header .container .search form input::placeholder {
-  font-size: 0.98749177vw;
+  font-size: 1.11915734vw;
   color: #A6A6A6;
 }
 .header .container .search .line {
-  margin-right: 1.51415405vw;
+  margin-right: 1.05332456vw;
   align-self: center;
   width: 0.06583278vw;
   height: 1.7116524vw;
@@ -76,6 +76,7 @@
   align-self: center;
   font-size: 0.98749177vw;
   color: #A6A6A6;
+  cursor: pointer;
 }
 .header .container .search i span {
   margin-right: 0.65832785vw;

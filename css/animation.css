@@ -1,0 +1,35 @@
+@keyframes smallchange{
+    20%{
+      transform: translateX(0);
+    }
+    40%{
+      transform: translateX(-23.6998025vw);
+    }
+    60%{
+      transform: translateX(-23.6998025vw);
+    }
+    80%{
+      transform: translateX(-47.399605vw);
+    }
+    100%{
+      transform: translateX(-47.399605vw);
+    }
+  }
+  
+  @keyframes centerchange{
+    20%{
+      transform: translateX(0);
+    }
+    40%{
+      transform: translateX(-39.49967084vw);
+    }
+    60%{
+      transform: translateX(-39.49967084vw);
+    }
+    80%{
+      transform: translateX(-78.99934168vw);
+    } 
+    100%{
+      transform: translateX(-78.99934168vw);
+    }
+  }
