@@ -24,7 +24,7 @@
   position: absolute;
   top: 1.31665569vw;
   left: 10%;
-  width: 89.6642528vw;
+  width: 82.42264648vw;
   height: 5.5957867vw;
   /*搜尋*/
 }
@@ -71,7 +71,7 @@
   align-self: center;
   width: 0.06583278vw;
   height: 1.7116524vw;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #A6A6A6;
 }
 .header .container .search i {
   align-self: center;
