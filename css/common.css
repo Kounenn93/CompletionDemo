@@ -83,14 +83,7 @@
   vertical-align: bottom;
 }
 /* footer區域 */
-body {
-  position: relative;
-}
 .footer {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
   margin-top: 13.16655695vw;
   height: 10.53324556vw;
   background-color: #f8f8f8;

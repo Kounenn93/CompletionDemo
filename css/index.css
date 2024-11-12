@@ -19,6 +19,22 @@
 .log_sign .signup {
   background-color: #ffbd59;
 }
+/*讓footer區永遠置底*/
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  display: flex;
+  /*使物件依序排列*/
+  flex-direction: column;
+  /*使物件垂直排列*/
+}
+.main {
+  flex-grow: 1;
+  /*可佔滿垂直剩餘的空間*/
+}
 /* -------------- */
 /* banner區域樣式 */
 .banner {
@@ -28,44 +44,6 @@
   height: 26.33311389vw;
   overflow: hidden;
 }
-
-/* 設定輪播圖動畫（在less檔無法設定，必須親自到css檔才能設定） */
-@keyframes smallchange{
-  20%{
-    transform: translateX(0);
-  }
-  40%{
-    transform: translateX(-23.6998025vw);
-  }
-  60%{
-    transform: translateX(-23.6998025vw);
-  }
-  80%{
-    transform: translateX(-47.399605vw);
-  }
-  100%{
-    transform: translateX(-47.399605vw);
-  }
-}
-
-@keyframes centerchange{
-  20%{
-    transform: translateX(0);
-  }
-  40%{
-    transform: translateX(-39.49967084vw);
-  }
-  60%{
-    transform: translateX(-39.49967084vw);
-  }
-  80%{
-    transform: translateX(-78.99934168vw);
-  } 
-  100%{
-    transform: translateX(-78.99934168vw);
-  }
-}
-
 .banner .left {
   position: absolute;
   left: -2%;
@@ -79,7 +57,6 @@
 .banner .left ul {
   display: flex;
   width: 71.0994075vw;
-  animation: smallchange 9s infinite ;
 }
 .banner .left ul li {
   height: 15.79986833vw;
@@ -102,7 +79,6 @@
 .banner .center ul {
   display: flex;
   width: 118.49901251vw;
-  animation: centerchange 9s infinite ;
 }
 .banner .center ul li {
   height: 26.33311389vw;
@@ -130,7 +106,6 @@
 .banner .right ul {
   display: flex;
   width: 71.0994075vw;
-  animation: smallchange 9s infinite;
 }
 .banner .right ul li {
   height: 15.79986833vw;
