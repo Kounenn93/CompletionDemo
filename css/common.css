@@ -58,8 +58,9 @@
 .header .container .search form input {
   width: 33.57472021vw;
   height: 3.94996708vw;
+  font-size: 1.11915734vw;
   background-color: transparent;
-  line-height: 4.21329822vw;
+  line-height: 3.94996708vw;
 }
 .header .container .search form input::placeholder {
   font-size: 1.11915734vw;
