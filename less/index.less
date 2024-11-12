@@ -30,19 +30,6 @@
 }
 
 
-/*讓footer區永遠置底*/
-html, body {
-    height: 100%;
-    margin: 0;
-  }
-  body {
-    display: flex; /*使物件依序排列*/
-    flex-direction: column; /*使物件垂直排列*/
-  }
-.main{
-    flex-grow: 1; /*可佔滿垂直剩餘的空間*/
-}
-
 /* -------------- */
 /* banner區域樣式 */
 .banner {
@@ -65,6 +52,7 @@ html, body {
         ul {
             display: flex;
             width: (1080 / @vw);
+            animation: smallchange 9s infinite ;
 
             li {
                 height: (240 / @vw);
@@ -91,6 +79,7 @@ html, body {
         ul {
             display: flex;
             width: (1800 / @vw);
+            animation: centerchange 9s infinite ;
 
             li {
                 height: (400 / @vw);
@@ -123,6 +112,7 @@ html, body {
         ul {
             display: flex;
             width: (1080 / @vw);
+            animation: smallchange 9s infinite;
 
             li {
                 height: (240 / @vw);
