@@ -24,7 +24,7 @@
 .banner {
   position: relative;
   display: flex;
-  margin: 0.65832785vw 0 2.63331139vw 0;
+  margin: 0.65832785vw 0 3.29163924vw 0;
   height: 26.33311389vw;
   overflow: hidden;
 }
@@ -104,9 +104,8 @@
 }
 /* 分界區塊 */
 .divid {
-  margin-bottom: 1.31665569vw;
-  width: 100%;
-  height: 4.60829493vw;
+  margin-bottom: 1.97498354vw;
+  height: 0.32916392vw;
   background-color: #ffbd59;
 }
 /* -------------------- */
