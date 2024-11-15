@@ -48,7 +48,6 @@
 .menu {
   display: flex;
   justify-content: space-between;
-  flexbackground-color: blue;
 }
 .menu .left {
   padding: 3.29163924vw 0;
