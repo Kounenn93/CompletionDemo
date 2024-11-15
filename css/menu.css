@@ -7,7 +7,7 @@
 }
 .user_function i {
   font-size: 3.29163924vw;
-  color: orange;
+  color: #ffbd59;
   cursor: pointer;
 }
 .shopinfo {
@@ -43,7 +43,7 @@
 }
 .shopinfo .text .comment .bi-star-fill,
 .shopinfo .text .comment .bi-star-half {
-  color: orange;
+  color: #ffbd59;
 }
 .menu {
   display: flex;

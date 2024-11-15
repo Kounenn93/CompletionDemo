@@ -52,7 +52,7 @@
   border-radius: 3.94996708vw;
 }
 .header .container .search:focus-within {
-  border: 2px solid orange;
+  border: 2px solid #ffbd59;
   /* 設定聚焦時的邊框顏色 */
 }
 .header .container .search form input {
