@@ -52,7 +52,7 @@
         ul {
             display: flex;
             width: (1080 / @vw);
-            animation: smallchange 9s infinite ;
+            animation: smallchange 9s infinite;
 
             li {
                 height: (240 / @vw);
@@ -76,10 +76,12 @@
         border-radius: (20 / @vw);
         overflow: hidden;
 
+
+
         ul {
             display: flex;
             width: (1800 / @vw);
-            animation: centerchange 9s infinite ;
+            animation: centerchange 9s infinite;
 
             li {
                 height: (400 / @vw);
@@ -93,11 +95,49 @@
                         transform: scale(1.1);
                         opacity: 0.8;
                         transition: all 0.3s;
+
                     }
                 }
             }
         }
+
+        /* 圓點指示器樣式 */
+        ol {
+            display: flex;
+            position: absolute;
+            bottom: 17px;
+            right: 16px;
+
+            li {
+                margin-left: 8px;
+                width: 22px;
+                height: 22px;
+                /* background-color: pink; */
+                border-radius: 50%;
+
+                cursor: pointer;
+
+                i {
+                    margin: 4px;
+                    display: block;
+                    width: 14px;
+                    height: 14px;
+                    background-color: rgba(255, 255, 255, 0.5);
+                    border-radius: 50%;
+                }
+            }
+
+            /* 選中狀態：li半透明、i為白色 */
+            .current {
+                background-color: rgba(255, 255, 255, 0.5);
+
+                i {
+                    background-color: #fff;
+                }
+            }
+        }
     }
+
 
     .right {
         position: absolute;
@@ -126,6 +166,8 @@
         }
     }
 }
+
+
 
 
 /* 分界區塊 */
@@ -184,11 +226,12 @@
 
 /* 內容樣式：設為共用 */
 .content {
-    margin-bottom: (80 / @vw);
+    margin-bottom: (50 / @vw);
 
     ul {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        row-gap: (50 / @vw);
 
         li {
             position: relative;

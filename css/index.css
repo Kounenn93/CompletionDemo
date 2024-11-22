@@ -41,7 +41,7 @@
 .banner .left ul {
   display: flex;
   width: 71.0994075vw;
-  animation: smallchange 9s infinite ;
+  animation: smallchange 9s infinite;
 }
 .banner .left ul li {
   height: 15.79986833vw;
@@ -60,11 +60,12 @@
   /* background-color: pink; */
   border-radius: 1.31665569vw;
   overflow: hidden;
+  /* 圓點指示器樣式 */
 }
 .banner .center ul {
   display: flex;
   width: 118.49901251vw;
-  animation: centerchange 9s infinite ;
+  animation: centerchange 9s infinite;
 }
 .banner .center ul li {
   height: 26.33311389vw;
@@ -78,6 +79,35 @@
   transform: scale(1.1);
   opacity: 0.8;
   transition: all 0.3s;
+}
+.banner .center ol {
+  display: flex;
+  position: absolute;
+  bottom: 17px;
+  right: 16px;
+  /* 選中狀態：li半透明、i為白色 */
+}
+.banner .center ol li {
+  margin-left: 8px;
+  width: 22px;
+  height: 22px;
+  /* background-color: pink; */
+  border-radius: 50%;
+  cursor: pointer;
+}
+.banner .center ol li i {
+  margin: 4px;
+  display: block;
+  width: 14px;
+  height: 14px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+.banner .center ol .current {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.banner .center ol .current i {
+  background-color: #fff;
 }
 .banner .right {
   position: absolute;
@@ -145,11 +175,12 @@
 }
 /* 內容樣式：設為共用 */
 .content {
-  margin-bottom: 5.26662278vw;
+  margin-bottom: 3.29163924vw;
 }
 .content ul {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  row-gap: 3.29163924vw;
 }
 .content ul li {
   position: relative;
