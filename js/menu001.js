@@ -562,15 +562,6 @@ menuLeft += `</ul>`;
 const leftDiv = document.getElementById('left')
 leftDiv.innerHTML=menuLeft;
 
-  /*
-  <ul>
-      <li>
-        <h4>無咖啡因</h4>
-        <i class="bi-caret-right-fill"></i>
-    </li>                    
-</ul>
-                */
-
 let menuRight = '';
 for(let k in result){
   menuRight +=`<h4>${k}</h4><ul>`;
@@ -592,3 +583,35 @@ for(let k in result){
     const rightDiv = document.getElementById('right');
     rightDiv.innerHTML = menuRight;
 
+// 左側導航與右側內容的對應邏輯
+const leftItems = document.querySelectorAll('.menu .left ul li');
+const rightSections = document.querySelectorAll('.menu .right h4');
+
+// 監聽滾動事件
+document.getElementById('right').addEventListener('scroll', () => {
+    let currentIndex = -1;
+
+    // 找出目前可見的右側內容
+    rightSections.forEach((section, index) => {
+        const offsetTop = section.getBoundingClientRect().top - document.getElementById('right').getBoundingClientRect().top;
+        if (offsetTop <= 50) {
+            currentIndex = index;
+        }
+    });
+
+    // 更新左側導航的選中狀態
+    leftItems.forEach((item, index) => {
+        if (index === currentIndex) {
+            item.classList.add('active');
+        } else {
+            item.classList.remove('active');
+        }
+    });
+});
+
+// 點擊左側導航滾動到對應的右側內容
+leftItems.forEach((item, index) => {
+    item.addEventListener('click', () => {
+        rightSections[index].scrollIntoView({ behavior: 'smooth' });
+    });
+});

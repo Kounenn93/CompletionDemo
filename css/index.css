@@ -10,7 +10,7 @@
 }
 .log_sign button:hover {
   transform: scale(1.1);
-  box-shadow: 2px 3px 10px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0.13166557vw 0.19749835vw 0.65832785vw 0.06583278vw rgba(0, 0, 0, 0.5);
 }
 .log_sign .login {
   margin-right: 0.65832785vw;

@@ -81,6 +81,14 @@
 .menu .left ul li:hover i {
   color: #e75a70;
 }
+.menu .left ul li.active {
+  background-color: #ffbd59;
+  color: #fff;
+  font-weight: bold;
+}
+.menu .left ul li.active i {
+  color: #e75a70;
+}
 .menu .right {
   padding-right: 1.31665569vw;
   width: 56.61619487vw;
