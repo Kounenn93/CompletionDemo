@@ -1,0 +1,89 @@
+/* Reset & 基本設定 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    /*background-color: #ffffff; /* 確保背景顏色統一 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden; /* 防止多餘滾動條 */
+}
+
+/* 容器設計 */
+.container {
+    background: #ffffff;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 100%; /* 自動適配 */
+    padding: 20px 30px;
+    box-shadow: none; /* 確保沒有陰影 */
+    border: none; /* 完全移除邊框 */
+}
+
+/* 標題設計 */
+.form-header h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* 表單欄位設計 */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* 按鈕設計 */
+.form-group .btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffbd59;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-group .btn:hover {
+    background-color: #ffa940;
+}
+
+/* 底部資訊設計 */
+.form-footer {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+.form-footer a {
+    color: #ffbd59;
+    text-decoration: none;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}

@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/animation.css">
+    <link rel="stylesheet" href="./css/modal.css">
     
 </head>
 
@@ -26,8 +27,9 @@
             <div class="container">
                 <!-- logo -->
                 <div class="logo">
-                    <h1><a href="./index.html" onclick="return false">噹菜 TIAM-TSHAI</a></h1>
+                    <h1><a href="./index.html" onclick="return false">噹菜 T`IAM-TSHAI</a></h1>
                 </div>
+
                 <!-- 搜尋 -->
                 <div class="search">
                     <form action="#">
@@ -39,14 +41,31 @@
                             pin_drop
                         </span>新增地址</i>
                 </div>
+
                 <!-- 登入註冊區 -->
                 <div class="log_sign">
-                    <a href="#"> <button type="button" class="login">登入</button></a>
-                    <a href="#"></a><button type="button" class="signup">註冊</button></a>
+                    <button id="login-btn" type="button" class="login">登入</button>
+                    <button id="signup-btn" type="button" class="signup">註冊</button>
+                </div>
+
+                <!-- 登入模態框 -->
+                <div id="login-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-btn">&times;</span>
+                        <iframe src="./login.html" frameborder="0" style="width:100%; height:400px;"></iframe>
+                    </div>
+                </div>
+
+                <!-- 註冊模態框 -->
+                <div id="signup-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-btn">&times;</span>
+                        <iframe src="./signup.html" frameborder="0" style="width:100%; height:400px;"></iframe>
+                    </div>
                 </div>
             </div>
+            <script src="./js/modal.js"></script>
         </div>
-
 
         <!-- banner區域 -->
         <div class="banner">
@@ -306,6 +325,8 @@
             copyright © 11302JAVA班第3組
         </div>
     </div>
+
+    
 
 </body>
 
