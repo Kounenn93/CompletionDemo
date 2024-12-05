@@ -3,6 +3,10 @@ const signupBtn = document.getElementById('signup-btn');
 const loginModal = document.getElementById('login-modal');
 const signupModal = document.getElementById('signup-modal');
 const closeBtns = document.querySelectorAll('.close-btn');
+const loginIframe = document.getElementById('login-iframe');
+const signupIframe = document.getElementById('signup-iframe');
+
+
 
 // 開啟登入模態框
 loginBtn.addEventListener('click', () => {
@@ -12,7 +16,10 @@ loginBtn.addEventListener('click', () => {
 // 開啟註冊模態框
 signupBtn.addEventListener('click', () => {
     signupModal.style.display = 'flex'; // 顯示模態框
+
+    signupIframe.src = "./signup.html";  
 });
+
 
 // 關閉模態框
 closeBtns.forEach((btn) => {
@@ -29,3 +36,13 @@ window.addEventListener('click', (event) => {
         signupModal.style.display = 'none';
     }
 });
+
+// window.addEventListener('keydown', (event) => {
+//     while (event.key === "Esc") {
+//         if (event.target === loginModal || event.target === signupModal) {
+//             loginModal.style.display = 'none';
+//             signupModal.style.display = 'none';
+//         }
+//     }
+    
+// });
