@@ -11,6 +11,8 @@ const signupIframe = document.getElementById('signup-iframe');
 // 開啟登入模態框
 loginBtn.addEventListener('click', () => {
     loginModal.style.display = 'flex';  // 顯示模態框
+
+    loginIframe.src = "./login.html"; 
 });
 
 // 開啟註冊模態框
@@ -37,12 +39,10 @@ window.addEventListener('click', (event) => {
     }
 });
 
-// window.addEventListener('keydown', (event) => {
-//     while (event.key === "Esc") {
-//         if (event.target === loginModal || event.target === signupModal) {
-//             loginModal.style.display = 'none';
-//             signupModal.style.display = 'none';
-//         }
-//     }
-    
-// });
+// 監聽來自 iframe 的訊息
+window.addEventListener('message', (event) => {
+    if (event.data === 'closeIframe') {
+        signupModal.style.display = 'none'; // 隱藏 iframe
+        loginModal.style.display = 'none';
+    }
+});
