@@ -44,7 +44,7 @@
   animation: smallchange 9s infinite;
 }
 .banner .left ul li {
-  height: 15.79986833vw;
+  width: 23.6998025vw;
 }
 .banner .left ul li img {
   width: 100%;
@@ -68,7 +68,7 @@
   animation: centerchange 9s infinite;
 }
 .banner .center ul li {
-  height: 26.33311389vw;
+  width: 39.49967084vw;
 }
 .banner .center ul li img {
   width: 100%;
@@ -125,7 +125,7 @@
   animation: smallchange 9s infinite;
 }
 .banner .right ul li {
-  height: 15.79986833vw;
+  width: 23.6998025vw;
 }
 .banner .right ul li img {
   width: 100%;
