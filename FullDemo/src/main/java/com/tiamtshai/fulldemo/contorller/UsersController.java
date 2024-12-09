@@ -1,7 +1,9 @@
 package com.tiamtshai.fulldemo.contorller;
 
 import com.tiamtshai.fulldemo.model.CustUsers;
-import lombok.extern.slf4j.Slf4j;
+import com.tiamtshai.fulldemo.model.LoginUser;
+import com.tiamtshai.fulldemo.rowmapper.CustomerUsersRowMapper;
+import com.tiamtshai.fulldemo.service.UserSignupService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
@@ -9,11 +11,13 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
+
 @RestController
-@Slf4j
 public class UsersController {
 
     //設定ip位置直接跳轉首頁，並URL不顯示出index.html
@@ -22,36 +26,19 @@ public class UsersController {
         return new ModelAndView("/index.html");
     }
 
-    //前台消費者會員註冊邏輯
-    // 注入JDBC寫入工具
-    @Autowired
-    private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
-    //注入加密工具
+    //前台消費者會員註冊
+    //注入會員註冊Service層
     @Autowired
-    private PasswordEncoder passwordEncoder;
+    private UserSignupService userSignupService;
 
-    //限定註冊只能以post方法（因為有密碼）
+    //註冊：限定只能以post方法（因為有密碼）
     @PostMapping("/signup_request")
     public String register(@ModelAttribute CustUsers custUsers) {
 
-        String hsPWd = passwordEncoder.encode(custUsers.getCustuser_password());
-        // 密碼加密
-
-        // SQL 語句
-        String sql = "INSERT INTO customer_users(custuser_name, custuser_email, custuser_phone, custuser_password, custuser_city, custuser_dist, custuser_address) VALUES (:custuserName, :custuserEmail, :custuserPhone, :custuserPassword, :custuserCity, :custuserDist, :custuserAddress)";
-        Map<String, Object> map = new HashMap<>();
-        map.put("custuserName", custUsers.getCustuser_name());
-        map.put("custuserEmail", custUsers.getCustuser_email());
-        map.put("custuserPhone", custUsers.getCustuser_phone());
-        map.put("custuserPassword", hsPWd);
-        map.put("custuserCity", custUsers.getCustuser_city());
-        map.put("custuserDist", custUsers.getCustuser_dist());
-        map.put("custuserAddress", custUsers.getCustuser_address());
-
-        // 插入資料庫
+        // 回傳訊息給前端
         try {
-            namedParameterJdbcTemplate.update(sql, map);
+            userSignupService.registerUser(custUsers);
             return "<h1>註冊成功！！</h1>";
         } catch (DuplicateKeyException e) {
             e.printStackTrace();
@@ -68,5 +55,42 @@ public class UsersController {
             // 捕捉其他非預期錯誤
             return "<h1 style='color: red;'>註冊失敗：系統錯誤，請稍後再試或請洽客服人員。</h1>";
         }
+    }
+
+
+    // 注入JDBC工具
+    @Autowired
+    private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
+    //登入：限定只能以post方法（因為有密碼）
+    @PostMapping("/login_request")
+    public String login(@ModelAttribute LoginUser loginuser){
+        String sql = "SELECT custuser_id,custuser_name, custuser_email, custuser_phone, custuser_password, custuser_city, custuser_dist, custuser_address FROM customer_users WHERE custuser_email = :userName OR custuser_phone=:userName";
+
+        Map<String, Object> map = new HashMap<>();
+        map.put("userName", loginuser.getUserName());
+
+        List<CustUsers> custUsers = namedParameterJdbcTemplate.query(sql, map, new CustomerUsersRowMapper());
+
+        if (custUsers.size() > 0) {
+            String plainPassword=loginuser.getUserPassword();
+            String hashedPassword=custUsers.get(0).getCustuser_password();
+            boolean isMatch = passwordEncoder.matches(plainPassword, hashedPassword);
+            if(isMatch){
+                return "登入成功";
+            }
+            else {
+                return "密碼錯誤";
+            }
+
+        }
+        else {
+            return "notfound";
+        }
+
+
+
     }
 }

@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class CustUsers {
+    private  int custuser_id = 0;
     private String custuser_name;
     private String custuser_email;
     private String custuser_phone;
@@ -13,6 +14,14 @@ public class CustUsers {
     private String custuser_city;
     private String custuser_dist;
     private String custuser_address;
+
+    public int getCustuser_id() {
+        return custuser_id;
+    }
+
+    public void setCustuser_id(int custuser_id) {
+        this.custuser_id = custuser_id;
+    }
 
     public String getCustuser_name() {
         return custuser_name;

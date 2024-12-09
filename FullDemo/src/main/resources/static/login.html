@@ -11,14 +11,14 @@
     <div class="form-header">
         <h2>登入</h2>
     </div>
-    <form method="post" action="#">
+    <form method="post" action="/login_request">
         <div class="form-group">
             <label for="login-username">信箱或手機號碼</label>
-            <input type="text" id="login-username" placeholder="輸入信箱或手機號碼">
+            <input type="text" id="login-username" name="userName" placeholder="輸入信箱或手機號碼">
         </div>
         <div class="form-group">
             <label for="login-password">密碼</label>
-            <input type="password" id="login-password" placeholder="輸入密碼">
+            <input type="password" id="login-password" name="userPassword" placeholder="輸入密碼">
         </div>
         <div class="form-group">
             <button type="submit" class="btn">登入</button>
