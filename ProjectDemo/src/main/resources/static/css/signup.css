@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    /*background-color: #f4f4f4;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    box-shadow: none; /* 確保沒有陰影 */
+    border: none; /* 完全移除邊框 */
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-header h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.signup-form {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+    position: relative;
+}
+
+.form-step {
+    min-width: 100%;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.form-step.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group select {
+    width: 40%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.next-btn,
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffbd59;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.next-btn:hover,
+.btn:hover {
+    background-color: #ff9a30;
+}
+
+.error-message {
+    display: none;
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+

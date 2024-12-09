@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新增後台店家</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <style>
+  </style>
+  <script src="./js/distData.js"></script>
+</head>
+
+<body>
+  <div class="container" style="padding: 2% 5%;">
+    <h2 style="margin-bottom: 3%;">商家權限登錄</h2>
+    <form class="row g-3" style="border: 1px solid black; padding: 2%; padding-top: 0;">
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">帳號</label>
+        <input type="account" class="form-control" id="inputAccount">
+      </div>
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">密碼</label>
+        <input type="password" class="form-control" id="inputPassword4">
+      </div>
+      <div class="col-md-6" style="width: 100%;">
+        <label for="inputPassword4" class="form-label">再次確認密碼</label>
+        <input type="password" class="form-control" id="inputPassword5">
+      </div>
+      <div class="col-md-6">
+        <label for="inputEmail" class="form-label">E-mail</label>
+        <input type="text" class="form-control" id="inputEmail" placeholder="例：google@gmail.com">
+      </div>
+      <div class="col-md-6">
+        <label for="inputEmail" class="form-label">電話</label>
+        <input type="text" class="form-control" id="inputEmail" placeholder="例：03-33312345 或 0912345678 ">
+      </div>
+      <div class="col-md-4">
+        <label for="inputState" class="form-label">縣／市</label>
+        <select id="city" class="form-select">
+          <option selected>選擇縣市</option>
+          <option>臺北市</option>
+          <option>新北市</option>
+          <option>桃園市</option>
+          <option>臺中市</option>
+          <option>臺南市</option>
+          <option>高雄市</option>
+          <option>宜蘭縣</option>
+          <option>新竹縣</option>
+          <option>苗栗縣</option>
+          <option>彰化縣</option>
+          <option>南投縣</option>
+          <option>雲林縣</option>
+          <option>嘉義縣</option>
+          <option>屏東縣</option>
+          <option>花蓮縣</option>
+          <option>臺東縣</option>
+          <option>澎湖縣</option>
+          <option>基隆市</option>
+          <option>新竹市</option>
+          <option>嘉義市</option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <label for="inputState" class="form-label">鄉／鎮／市／區</label>
+        <select id="dist" class="form-select">
+          <option selected></option>
+        </select>
+      </div>
+      <div class="col-12">
+        <label for="inputAddress2" class="form-label">街名+門牌號碼</label>
+        <input type="text" class="form-control" id="inputAddress2" placeholder="例：幼獅路二段3號">
+      </div>
+      <div class="col-md-6">
+        <label for="shopMainName" class="form-label">店鋪名</label>
+        <input type="shopMainName" class="form-control" id="shopMainName" placeholder="例：鮮茶道">
+      </div>
+      <div class="col-md-6">
+        <label for="shopBranchName" class="form-label">分店名</label>
+        <input type="shopBranchName" class="form-control" id="shopBranchName" placeholder="例：楊梅埔心店">
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary" style="margin-right: 1%;">註冊</button>
+        <button type="reset" class="btn btn-primary">重填</button>
+      </div>
+    </form>
+  </div>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/back_register.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,194 @@
+//out: ../css/
+
+@vw: 15.19vw;
+
+/* 各頁共用樣式 */
+.wrapper {
+    margin: 0 auto;
+    width: (1200 / @vw);
+}
+
+/* header區域樣式 */
+.header {
+    position: relative;
+    height: (190 / @vw);
+    overflow: hidden;
+
+    .background {
+        position: absolute;
+        bottom: 20%;
+        left: -20%;
+        width: (2200 / @vw);
+        height: (340.4 / @vw);
+        background-color: #fbfbc7;
+        border-radius: 50%;
+    }
+
+    /* header內容 */
+    .container {
+        display: flex;
+        position: absolute;
+        top: (20 / @vw);
+        left: 10%;
+        width: (1252 / @vw);
+        height: (85 / @vw);
+        // background-color: pink;
+
+        .logo {
+            margin-right: (90 / @vw);
+            width: (121 / @vw);
+            height: (85 / @vw);
+
+            h1 {
+                a {
+                    display: block;
+                    /*a標籤為行內元素，設置寬高不生效，必須轉成塊級元素，寬高才能生效*/
+                    width: (121 / @vw);
+                    height: (85 / @vw);
+                    background: url(../img/LOGO121_87.png) no-repeat;
+                    background-size: contain;
+                    font-size: 0;
+                }
+            }
+        }
+
+        /*搜尋*/
+        .search {
+            display: flex;
+            margin: (9 / @vw) (68 / @vw) (6 / @vw) 0;
+            padding-left: (32 / @vw);
+            width: (735 / @vw);
+            height: (60 / @vw);
+            background-color: #fff;
+            border-radius: (60 / @vw);
+
+            &:focus-within {
+                border: 2px solid #ffbd59;
+                /* 設定聚焦時的邊框顏色 */
+            }
+
+            form {
+                input {
+                    width: (510 / @vw);
+                    height: (60 / @vw);
+                    font-size: (17 / @vw);
+                    background-color: transparent;
+                    line-height: (60 / @vw);
+
+                    &::placeholder {
+                        font-size: (17 / @vw);
+                        color: #A6A6A6;
+                    }
+                }
+            }
+
+            .line {
+                margin-right: (16 / @vw);
+                align-self: center;
+                width: (1 / @vw);
+                height: (26 / @vw);
+                background-color: #A6A6A6;
+            }
+
+            i {
+                align-self: center;
+                font-size: (15 / @vw);
+                color: #A6A6A6;
+                cursor: pointer;
+
+                span {
+                    margin-right: (10 / @vw);
+                    font-size: (24 / @vw);
+                    vertical-align: bottom;
+                }
+            }
+
+        }
+
+    }
+
+}
+
+/* footer */
+
+/*footer區域置底寫法*/
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  body {
+    display: flex; /*使物件依序排列*/
+    flex-direction: column; /*使物件垂直排列*/
+  }
+  .main {
+    flex-grow: 1; /*可佔滿垂直剩餘的空間*/
+    // background-color: yellow;
+  }
+  
+.footer {
+    margin-top: (100 / @vw);
+    height: (160 / @vw);
+    background-color: #f8f8f8;
+
+    .companyinfo {
+        display: flex;
+        height: (120 / @vw);
+        // background-color: pink;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+        .left {
+            font-size: (25 / @vw);
+            color: #737373;
+            line-height: (120 / @vw);
+
+            img {
+                width: (139 / @vw);
+                height: (100 / @vw);
+            }
+        }
+
+        .right{
+            display: flex;
+            justify-content: end;
+            flex: 1;
+            height: (120 / @vw);
+            // background-color: pink;
+
+            dl{
+                margin: (10 / @vw) (15 / @vw);
+                
+
+                &:nth-child(2){
+                    margin-right: 0;
+                }
+
+                dd{
+                    margin-bottom: (8 / @vw);
+                    font-size: (16 / @vw);
+
+                    a{
+                        color: #737373;
+                    }
+                    
+                    
+                }
+                
+            }
+            
+
+        }
+
+       
+
+    }
+
+    .copyright {
+        line-height: (40 / @vw);
+        font-size: (12 / @vw);
+        color: #737373;
+        text-align: right;
+
+    }
+
+
+}

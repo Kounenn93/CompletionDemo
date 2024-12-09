@@ -1,0 +1,131 @@
+.user_function {
+  display: flex;
+  justify-content: space-between;
+  width: 15.66820276vw;
+  height: 5.5957867vw;
+  line-height: 5.5957867vw;
+}
+.user_function i {
+  font-size: 3.29163924vw;
+  color: #ffbd59;
+  cursor: pointer;
+}
+.shopinfo {
+  display: flex;
+  height: 6.58327847vw;
+  margin-bottom: 3.29163924vw;
+}
+.shopinfo .pic {
+  width: 6.58327847vw;
+  height: 6.58327847vw;
+  background-color: green;
+  margin-right: 3.29163924vw;
+}
+.shopinfo .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.shopinfo .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  height: 100%;
+}
+.shopinfo .text h3 {
+  font-size: 1.7116524vw;
+  font-weight: 900;
+}
+.shopinfo .text p {
+  font-size: 1.05332456vw;
+  color: #A6A6A6;
+}
+.shopinfo .text .comment .bi-star-fill,
+.shopinfo .text .comment .bi-star-half {
+  color: #ffbd59;
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+}
+.menu .left {
+  padding: 3.29163924vw 0;
+  width: 15.14154049vw;
+  height: auto;
+}
+.menu .left ul li {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 1.05332456vw;
+  margin-bottom: 1.31665569vw;
+  height: 3.29163924vw;
+  line-height: 3.29163924vw;
+  background-color: #e6c7bd;
+  border-radius: 3.29163924vw;
+  cursor: pointer;
+}
+.menu .left ul li h4 {
+  flex: 1;
+  text-align: center;
+  font-size: 1.18499013vw;
+  font-weight: 700;
+}
+.menu .left ul li i {
+  font-size: 1.44832126vw;
+  color: transparent;
+}
+.menu .left ul li:hover {
+  background-color: #dfd8d7;
+}
+.menu .left ul li:hover i {
+  color: #e75a70;
+}
+.menu .left ul li.active {
+  background-color: #ffbd59;
+  color: #fff;
+  font-weight: bold;
+}
+.menu .left ul li.active i {
+  color: #e75a70;
+}
+.menu .right {
+  padding-right: 1.31665569vw;
+  width: 56.61619487vw;
+  height: 100vh;
+  overflow: auto;
+}
+.menu .right h4 {
+  line-height: 3.29163924vw;
+  font-size: 1.31665569vw;
+  font-weight: 700;
+}
+.menu .right ul {
+  padding-bottom: 3.29163924vw;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  row-gap: 3.29163924vw;
+}
+.menu .right li {
+  padding-bottom: 1.97498354vw;
+  width: 8.55826201vw;
+  height: 11.45490454vw;
+  border-radius: 0.98749177vw;
+  cursor: pointer;
+}
+.menu .right li:hover {
+  background-color: #f8f8f8;
+}
+.menu .right li .pic {
+  width: 8.55826201vw;
+  height: 8.55826201vw;
+}
+.menu .right li .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.menu .right li p {
+  text-align: center;
+  font-size: 0.92165899vw;
+}
