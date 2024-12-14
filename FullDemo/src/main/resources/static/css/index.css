@@ -1,24 +1,3 @@
-/* 登入、註冊按鈕 */
-.log_sign button {
-  margin-top: 0.59249506vw;
-  width: 7.3074391vw;
-  height: 3.94996708vw;
-  border-radius: 3.94996708vw;
-  border: none;
-  font-size: 0.98749177vw;
-  cursor: pointer;
-}
-.log_sign button:hover {
-  transform: scale(1.1);
-  box-shadow: 0.13166557vw 0.19749835vw 0.65832785vw 0.06583278vw rgba(0, 0, 0, 0.5);
-}
-.log_sign .login {
-  margin-right: 0.65832785vw;
-  background-color: #fff;
-}
-.log_sign .signup {
-  background-color: #ffbd59;
-}
 /* -------------- */
 /* banner區域樣式 */
 .banner {

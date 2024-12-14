@@ -109,6 +109,49 @@
 
 }
 
+
+/* 登入、註冊按鈕 */
+.user_function button {
+    margin-top: (9 / @vw);
+    width: (111 / @vw);
+    height: (60 / @vw);
+    border-radius: (60 / @vw);
+    border: none;
+    font-size: (15 / @vw);
+    cursor: pointer;
+}
+
+.user_function button:hover {
+    transform: scale(1.1);
+    box-shadow: (2 / @vw) (3 / @vw) (10 / @vw) (1 / @vw) rgba(0, 0, 0, 0.5);
+}
+
+.user_function .login {
+    margin-right: (10 / @vw);
+    background-color: #fff;
+}
+
+.user_function .signup {
+    background-color: #ffbd59;
+}
+
+//登入後使用者功能區
+.user_function {
+    display: flex;
+    justify-content: space-between;
+    width: (238 / @vw);
+    height: (85 / @vw);
+    // background-color: green;
+    line-height: (85 / @vw);
+
+    i {
+        font-size: (50 / @vw);
+        color: #ffbd59;
+        cursor: pointer;
+    }
+}
+
+
 /* footer */
 
 /*footer區域置底寫法*/

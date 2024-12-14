@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>訂餐商品頁面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f9f9f9;
+        }
+        .container {
+            width: 100%;
+            max-width: 500px;
+            padding: 20px;
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .product-image {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .options {
+            display: flex;
+            gap: 10px;
+        }
+        .options button {
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            background-color: #f7f7f7;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .options button:hover {
+            background-color: #ffe5b4;
+        }
+        .input-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .input-group label {
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+        .input-group input {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .submit-button {
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            background-color: #ff9800;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        .submit-button:hover {
+            background-color: #e68900;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 商品圖片 -->
+        <img src="https://via.placeholder.com/500x300" alt="商品圖片" class="product-image">
+
+        <!-- 商品標題 -->
+        <div class="section">
+            <h1>芒果綠茶</h1>
+        </div>
+
+        <!-- 尺寸選項 -->
+        <div class="section">
+            <div class="section-title">尺寸</div>
+            <div class="options">
+                <button>S</button>
+                <button>M</button>
+                <button>L</button>
+            </div>
+        </div>
+
+        <!-- 溫度選項 -->
+        <div class="section">
+            <div class="section-title">溫度</div>
+            <div class="options">
+                <button>正常</button>
+                <button>去冰</button>
+                <button>少冰</button>
+                <button>微冰</button>
+            </div>
+        </div>
+
+        <!-- 糖度選項 -->
+        <div class="section">
+            <div class="section-title">糖度</div>
+            <div class="options">
+                <button>全糖</button>
+                <button>半糖</button>
+                <button>微糖</button>
+                <button>無糖</button>
+            </div>
+        </div>
+
+        <!-- 訂購人姓名和電話 -->
+        <div class="section">
+            <div class="input-group">
+                <label for="name">訂購人姓名</label>
+                <input type="text" id="name" placeholder="輸入姓名">
+            </div>
+            <div class="input-group">
+                <label for="phone">電話</label>
+                <input type="tel" id="phone" placeholder="輸入電話">
+            </div>
+        </div>
+
+        <!-- 提交按鈕 -->
+        <button class="submit-button">立即下單</button>
+    </div>
+</body>
+</html>

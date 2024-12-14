@@ -12,3 +12,41 @@ document.addEventListener('keydown', (event) => {
       window.parent.postMessage('closeIframe', '*');
   }
 });
+
+
+$('#loginForm').on('submit', function(e) {
+  e.preventDefault(); // 防止表單預設提交行為
+  $.ajax({
+    url: '/login_request',
+    method: 'POST',
+    data: $(this).serialize(), // 序列化表單數據
+    success: function(data) {
+          alert(data.message)
+          window.parent.postMessage('closeIframe', '*');
+    },
+    error: function(err) {
+        console.error(err);
+    }
+  });
+});
+
+
+
+
+
+// async function handleLogin(event) {
+
+//   const formData = new FormData(event.target);
+//   const data = Object.fromEntries(formData.entries());
+
+//   const response = await fetch('/login_request', {
+//       method: 'POST',
+//       headers: { 'Content-Type': 'application/json' },
+//       body: JSON.stringify(data),
+//   });
+
+//   const result = await response.json();
+
+//   // 發送訊息給父頁面
+//   window.parent.postMessage({ action: 'loginResponse', message: result.message, reload: result.status === 'success' }, '*');
+// }

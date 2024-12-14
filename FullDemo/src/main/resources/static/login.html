@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>登入</title>
     <link rel="stylesheet" href="./css/login.css">
+    <script src="./js/jquery-3.7.1.min.js"></script>
 </head>
 <body>
 <div class="container">
-    <div class="form-header">
+    <div class="form-header" >
         <h2>登入</h2>
     </div>
-    <form method="post" action="/login_request">
+    <form id="loginForm">
         <div class="form-group">
             <label for="login-username">信箱或手機號碼</label>
             <input type="text" id="login-username" name="userName" placeholder="輸入信箱或手機號碼">

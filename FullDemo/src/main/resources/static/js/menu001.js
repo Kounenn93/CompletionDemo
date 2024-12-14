@@ -569,7 +569,7 @@ for(let k in result){
       for(let i = 0 ; i<result[k].length;i++){
         menuRight +=`
         
-          <li>
+          <li id="itemBlock">
               <div class="pic">
                   <img src=${result[k][i].pic_url} alt="">
               </div>
@@ -583,6 +583,8 @@ for(let k in result){
     const rightDiv = document.getElementById('right');
     rightDiv.innerHTML = menuRight;
 
+    
+//電梯導航效果  
 // 左側導航與右側內容的對應邏輯
 const leftItems = document.querySelectorAll('.menu .left ul li');
 const rightSections = document.querySelectorAll('.menu .right h4');

@@ -4,8 +4,10 @@ import com.tiamtshai.fulldemo.model.CustUsers;
 import com.tiamtshai.fulldemo.model.LoginUser;
 import com.tiamtshai.fulldemo.rowmapper.CustomerUsersRowMapper;
 import com.tiamtshai.fulldemo.service.UserSignupService;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DuplicateKeyException;
+import org.springframework.http.ResponseEntity;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
@@ -66,7 +68,8 @@ public class UsersController {
 
     //登入：限定只能以post方法（因為有密碼）
     @PostMapping("/login_request")
-    public String login(@ModelAttribute LoginUser loginuser){
+    @ResponseBody // 返回 JSON 格式
+    public Map<String, Object> login(@ModelAttribute LoginUser loginuser, HttpSession session){
         String sql = "SELECT custuser_id,custuser_name, custuser_email, custuser_phone, custuser_password, custuser_city, custuser_dist, custuser_address FROM customer_users WHERE custuser_email = :userName OR custuser_phone=:userName";
 
         Map<String, Object> map = new HashMap<>();
@@ -74,23 +77,43 @@ public class UsersController {
 
         List<CustUsers> custUsers = namedParameterJdbcTemplate.query(sql, map, new CustomerUsersRowMapper());
 
+        //定義一個要回傳的Map物件（回傳給前端要是JSON格式）
+        Map<String, Object> response = new HashMap<>();
         if (custUsers.size() > 0) {
             String plainPassword=loginuser.getUserPassword();
             String hashedPassword=custUsers.get(0).getCustuser_password();
             boolean isMatch = passwordEncoder.matches(plainPassword, hashedPassword);
             if(isMatch){
-                return "登入成功";
+                session.setAttribute("custUser", custUsers.get(0));
+                System.out.println("Session attribute 'custUser': " + session.getAttribute("custUser"));
+                response.put("status", "success");
+                response.put("message", "登入成功");
             }
             else {
-                return "密碼錯誤";
+                response.put("status", "error");
+                response.put("message", "密碼錯誤");
             }
 
         }
         else {
-            return "notfound";
+            response.put("status", "error");
+            response.put("message", "查無用戶資料，請先註冊！");
         }
-
-
-
+        return response;
     }
+
+    //確認session狀態
+    @GetMapping("/checkSession")
+    public ResponseEntity<Map<String, Object>> checkSession(HttpSession session) {
+        Map<String, Object> response = new HashMap<>();
+        Object custUser = session.getAttribute("custUser");
+        if (custUser != null) {
+            response.put("loggedIn", true);
+            response.put("user", custUser); // 可返回必要的用戶資料
+        } else {
+            response.put("loggedIn", false);
+        }
+        return ResponseEntity.ok(response);
+    }
+
 }

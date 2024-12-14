@@ -1,15 +1,3 @@
-.user_function {
-  display: flex;
-  justify-content: space-between;
-  width: 15.66820276vw;
-  height: 5.5957867vw;
-  line-height: 5.5957867vw;
-}
-.user_function i {
-  font-size: 3.29163924vw;
-  color: #ffbd59;
-  cursor: pointer;
-}
 .shopinfo {
   display: flex;
   height: 6.58327847vw;

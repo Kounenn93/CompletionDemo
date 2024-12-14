@@ -84,6 +84,39 @@
   font-size: 1.57998683vw;
   vertical-align: bottom;
 }
+/* 登入、註冊按鈕 */
+.user_function button {
+  margin-top: 0.59249506vw;
+  width: 7.3074391vw;
+  height: 3.94996708vw;
+  border-radius: 3.94996708vw;
+  border: none;
+  font-size: 0.98749177vw;
+  cursor: pointer;
+}
+.user_function button:hover {
+  transform: scale(1.1);
+  box-shadow: 0.13166557vw 0.19749835vw 0.65832785vw 0.06583278vw rgba(0, 0, 0, 0.5);
+}
+.user_function .login {
+  margin-right: 0.65832785vw;
+  background-color: #fff;
+}
+.user_function .signup {
+  background-color: #ffbd59;
+}
+.user_function {
+  display: flex;
+  justify-content: space-between;
+  width: 15.66820276vw;
+  height: 5.5957867vw;
+  line-height: 5.5957867vw;
+}
+.user_function i {
+  font-size: 3.29163924vw;
+  color: #ffbd59;
+  cursor: pointer;
+}
 /* footer */
 /*footer區域置底寫法*/
 html,
