@@ -1,4 +1,4 @@
-setTimeout(() => {
+setTimeout(() => {  // 為了等查詢是否為登入狀態的異步請求完成，才跑以下程式碼，所以設置延遲200毫秒。
 
     const loginBtn = document.getElementById('login-btn');
     const signupBtn = document.getElementById('signup-btn');

@@ -68,7 +68,7 @@ public class UsersController {
 
     //登入：限定只能以post方法（因為有密碼）
     @PostMapping("/login_request")
-    @ResponseBody // 返回 JSON 格式
+//    @ResponseBody // 返回 JSON 格式
     public Map<String, Object> login(@ModelAttribute LoginUser loginuser, HttpSession session){
         String sql = "SELECT custuser_id,custuser_name, custuser_email, custuser_phone, custuser_password, custuser_city, custuser_dist, custuser_address FROM customer_users WHERE custuser_email = :userName OR custuser_phone=:userName";
 
