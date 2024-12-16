@@ -3,6 +3,7 @@ package com.tiamtshai.fulldemo.contorller;
 import com.tiamtshai.fulldemo.model.CustUsers;
 import com.tiamtshai.fulldemo.model.LoginUser;
 import com.tiamtshai.fulldemo.rowmapper.CustomerUsersRowMapper;
+import com.tiamtshai.fulldemo.service.UserLoginService;
 import com.tiamtshai.fulldemo.service.UserSignupService;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -66,39 +67,15 @@ public class UsersController {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
+    //消費者Login邏輯區
+    @Autowired
+    private UserLoginService userLoginService;
+
     //登入：限定只能以post方法（因為有密碼）
     @PostMapping("/login_request")
-//    @ResponseBody // 返回 JSON 格式
-    public Map<String, Object> login(@ModelAttribute LoginUser loginuser, HttpSession session){
-        String sql = "SELECT custuser_id,custuser_name, custuser_email, custuser_phone, custuser_password, custuser_city, custuser_dist, custuser_address FROM customer_users WHERE custuser_email = :userName OR custuser_phone=:userName";
-
-        Map<String, Object> map = new HashMap<>();
-        map.put("userName", loginuser.getUserName());
-
-        List<CustUsers> custUsers = namedParameterJdbcTemplate.query(sql, map, new CustomerUsersRowMapper());
-
-        //定義一個要回傳的Map物件（回傳給前端要是JSON格式）
-        Map<String, Object> response = new HashMap<>();
-        if (custUsers.size() > 0) {
-            String plainPassword=loginuser.getUserPassword();
-            String hashedPassword=custUsers.get(0).getCustuser_password();
-            boolean isMatch = passwordEncoder.matches(plainPassword, hashedPassword);
-            if(isMatch){
-                session.setAttribute("custUser", custUsers.get(0));
-                System.out.println("Session attribute 'custUser': " + session.getAttribute("custUser"));
-                response.put("status", "success");
-                response.put("message", "登入成功");
-            }
-            else {
-                response.put("status", "error");
-                response.put("message", "密碼錯誤");
-            }
-
-        }
-        else {
-            response.put("status", "error");
-            response.put("message", "查無用戶資料，請先註冊！");
-        }
+    public Map<String, Object> login(@ModelAttribute LoginUser loginUser, HttpSession session){
+        // 調用 Service 層處理邏輯
+        Map<String, Object> response = userLoginService.login(loginUser, session);
         return response;
     }
 

@@ -33,7 +33,7 @@ $(document).ready(function () {
   function createShopListItem(shop) {
       const $li = $(`
           <li>
-              <a href="./menu.html?shop_id=${shop.shopId}">
+              <a href="./menu.html?shopId=${shop.shopId}">
                   <div class="pic">
                       <img src="${shop.shopCoverUrl}" alt="${shop.shopMainName}">
                   </div>
@@ -51,7 +51,7 @@ $(document).ready(function () {
                   </div>
               </a>
               <div class="cover">
-                  <a href="./menu.html?shop_id=${shop.shopID}">
+                  <a href="./menu.html?shopId=${shop.shopId}">
                       <p>外送門檻</p>
                       <p>2公里以內200元</p>
                       <p>3公里以內300元</p>

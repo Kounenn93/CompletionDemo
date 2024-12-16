@@ -567,8 +567,7 @@ for(let k in result){
   menuRight +=`<h4>${k}</h4><ul>`;
   
       for(let i = 0 ; i<result[k].length;i++){
-        menuRight +=`
-        
+        menuRight +=`        
           <li id="itemBlock">
               <div class="pic">
                   <img src=${result[k][i].pic_url} alt="">
