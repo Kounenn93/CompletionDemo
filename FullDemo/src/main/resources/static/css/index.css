@@ -195,6 +195,9 @@
   line-height: 2.63331139vw;
   font-weight: 900;
 }
+.content ul li .txt .shopinfo h4 span {
+  font-size: 1.18499013vw;
+}
 .content ul li .txt .shopinfo strong {
   display: inline-block;
   height: 1.31665569vw;

@@ -40,7 +40,7 @@ $(document).ready(function () {
                   <div class="txt">
                       <div class="shopinfo">
                           <h4>${shop.shopMainName} 
-                              <span style="font-size: 18px;">${shop.shopBranchName}</span>
+                              <span>${shop.shopBranchName}</span>
                           </h4>
                           <strong>免運</strong>
                       </div>

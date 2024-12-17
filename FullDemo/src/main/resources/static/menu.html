@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="./css/menu.css">
     <link rel="stylesheet" href="./css/animation.css">
     <link rel="stylesheet" href="./css/modal.css">
+    <link rel="stylesheet" href="./css/orderModal.css">
 </head>
 
 <body>
@@ -40,7 +41,7 @@
                     <div class="line"></div>
                     <i><span class="material-icons-outlined">
                             pin_drop
-                        </span>新增地址</i>
+                        </span>幼獅路二段3號</i>
                 </div>
                 <!-- 使用者功能區 -->
                 <div class="user_function">
@@ -67,8 +68,8 @@
         </div>
 
         <!-- 店家資訊區 -->
-        <div class="shopinfo wrapper">
-            <div class="pic">
+        <div class="shopinfo wrapper" id="shopinfo">
+            <!-- <div class="pic">
                 <img src="./uploads/鮮茶道/鮮茶道logo.jpg" alt="">
             </div>
             <div class="text">
@@ -79,22 +80,21 @@
                     <i class="bi-star-fill"></i>
                     <i class="bi-star-half"></i>
                     <i class="bi-star"></i>
+                    3.9
                     (
                     <span class="counts">5</span>
                     )
                 </p>
                 <p class="info">
                     <i class="bi-geo-alt-fill"></i>
-                    <span class="distance">2.3</span>
+                    <span class="distance">2.3</span>km
                     ｜
                     <span class="address">桃園市楊梅區中興路6號</span>
                     ｜
                     <i class="bi-telephone-fill"></i>
                     <span class="phone">03-482-2119</span>
                 </p>
-
-            </div>
-
+            </div> -->
         </div>
 
         <!-- menu區域 -->
@@ -102,6 +102,50 @@
             <div class="left" id="left">
             </div>
             <div class="right" id="right">
+            </div>
+        </div>
+
+        <!-- 點餐modal -->
+        <div id="orderModal" class="orderModal">
+            <div class="orderModalContainer">
+                <span class="closeButton" id="closeButton">&times;</span>
+                <div class="itemPic">
+                    <!-- <img src="https://cdn-order-v3.nidin.shop/product/images/772/b772_62be4ad2_EHLi09Br.jpg" alt=""> -->
+                </div>
+                <div class="itemNameAndPrice">
+                    <!-- <h2>黑糖珍珠撞奶</h2>
+                    <h3>單價：$ <span>65</span></h3> -->
+                </div>
+                <div class="selection">
+                    <h3>糖度</h3>
+                    <label for="sugar10"><div><input type="radio" id="sugar10" name="sugarLevel" value="10">正常</div></label>
+                    <label for="sugar7"><div><input type="radio" id="sugar7" name="sugarLevel" value="7">少糖</div></label>
+                    <label for="sugar5"><div><input type="radio" id="sugar5" name="sugarLevel" value="5">半糖</div></label>
+                    <label for="sugar3"><div><input type="radio" id="sugar3" name="sugarLevel" value="3" checked>微糖</div></label>
+                    <div><input type="radio" id="sugar0" name="sugarLevel" value="0"><label for="sugar0">無糖</div></label>
+                </div>
+                <div class="selection">
+                    <h3>冰量</h3>
+                    <label for="ice10"><div><input type="radio" id="ice10" name="iceLevel" value="10">全冰</div></label>
+                    <label for="ice7"><div><input type="radio" id="ice7" name="iceLevel" value="7">少冰</div></label>
+                    <label for="ice5"><div><input type="radio" id="ice5" name="iceLevel" value="5">半冰</div></label>
+                    <label for="ice3"><div><input type="radio" id="ice3" name="iceLevel" value="3">微冰</div></label>
+                    <label for="ice0"><div><input type="radio" id="ice0" name="iceLevel" value="0">去冰</div></label>
+                    <label for="hot"><div><input type="radio" id="hot" name="iceLevel" value="-10">熱</div></label>
+                </div>
+                <div class="remark">
+                    <h3>備註</h3>
+                    <textarea name="remarkContent" id="remarkContent"></textarea>
+                </div>
+                <div class="count">
+                    <button class="button-count no-active" disabled>-</button>
+                    <input type="text" readonly class="countNumber" value="1">
+                    <button class="button-count">+</button>
+                </div>
+                <div class="submitButton">
+                    <button type="button">送出</button>
+                </div>
+                <!-- <iframe id="orderIframe" src="./order.html" frameborder="0" style="width:100%; height:400px;"></iframe> -->
             </div>
         </div>
 
@@ -133,6 +177,7 @@
     <script src="./js/menu.js"></script>
     <script src="./js/common.js"></script> 
     <script src="./js/modal.js"></script> 
+    <script src="./js/orderModal.js"></script>
 </body>
 
 </html>

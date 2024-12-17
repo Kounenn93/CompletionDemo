@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +16,7 @@
             min-height: 100vh;
             background-color: #f9f9f9;
         }
+
         .container {
             width: 100%;
             max-width: 500px;
@@ -23,23 +25,28 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
         }
-        .product-image {
+
+        .itemPic {
             width: 100%;
             border-radius: 10px;
             margin-bottom: 20px;
         }
+
         .section {
             margin-bottom: 20px;
         }
+
         .section-title {
             font-size: 18px;
             font-weight: bold;
             margin-bottom: 10px;
         }
+
         .options {
             display: flex;
             gap: 10px;
         }
+
         .options button {
             flex: 1;
             padding: 10px;
@@ -50,23 +57,28 @@
             cursor: pointer;
             transition: all 0.2s ease;
         }
+
         .options button:hover {
             background-color: #ffe5b4;
         }
+
         .input-group {
             display: flex;
             flex-direction: column;
         }
+
         .input-group label {
             margin-bottom: 5px;
             font-size: 16px;
         }
+
         .input-group input {
             padding: 10px;
             font-size: 16px;
             border: 1px solid #ddd;
             border-radius: 5px;
         }
+
         .submit-button {
             width: 100%;
             padding: 15px;
@@ -78,67 +90,57 @@
             cursor: pointer;
             transition: background-color 0.2s ease;
         }
+
         .submit-button:hover {
             background-color: #e68900;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <!-- 商品圖片 -->
-        <img src="https://via.placeholder.com/500x300" alt="商品圖片" class="product-image">
+         
+        <img src="https://cdn-order-v3.nidin.shop/product/images/772/b772_62be4ad2_EHLi09Br.jpg" alt="商品圖片"
+            class="itemPic">
 
         <!-- 商品標題 -->
         <div class="section">
-            <h1>芒果綠茶</h1>
-        </div>
-
-        <!-- 尺寸選項 -->
-        <div class="section">
-            <div class="section-title">尺寸</div>
-            <div class="options">
-                <button>S</button>
-                <button>M</button>
-                <button>L</button>
-            </div>
-        </div>
-
-        <!-- 溫度選項 -->
-        <div class="section">
-            <div class="section-title">溫度</div>
-            <div class="options">
-                <button>正常</button>
-                <button>去冰</button>
-                <button>少冰</button>
-                <button>微冰</button>
-            </div>
+            <h2>黑糖珍珠撞奶</h2>
+            <h3>單價：$ <span>65</span></h3>
         </div>
 
         <!-- 糖度選項 -->
         <div class="section">
             <div class="section-title">糖度</div>
-            <div class="options">
-                <button>全糖</button>
-                <button>半糖</button>
-                <button>微糖</button>
-                <button>無糖</button>
-            </div>
+            <div><input type="radio" id="suger10" name="sugerLevel" value="10"><label for="suger10">正常</label></div>
+            <div><input type="radio" id="suger7" name="sugerLevel" value="7"><label for="suger7">少糖</label></div>
+            <div><input type="radio" id="suger5" name="sugerLevel" value="5"><label for="suger5">半糖</label></div>
+            <div><input type="radio" id="suger3" name="sugerLevel" value="3"><label for="suger3">微糖</label></div>
+            <div><input type="radio" id="suger0" name="sugerLevel" value="0"><label for="suger0">無糖</label></div>
         </div>
 
-        <!-- 訂購人姓名和電話 -->
+
+        <!-- 溫度選項 -->
         <div class="section">
-            <div class="input-group">
-                <label for="name">訂購人姓名</label>
-                <input type="text" id="name" placeholder="輸入姓名">
-            </div>
-            <div class="input-group">
-                <label for="phone">電話</label>
-                <input type="tel" id="phone" placeholder="輸入電話">
-            </div>
+            <div class="section-title">冰量</div>
+            <div><input type="radio" id="ice100" name="iceLevel" value="100"><label for="ice100">全冰</label></div>
+            <div><input type="radio" id="ice75" name="iceLevel" value="75"><label for="ice75">少冰</label></div>
+            <div><input type="radio" id="ice50" name="iceLevel" value="50"><label for="ice50">半冰</label></div>
+            <div><input type="radio" id="ice25" name="iceLevel" value="25"><label for="ice25">微冰</label></div>
+            <div><input type="radio" id="ice0" name="iceLevel" value="0"><label for="ice0">去冰</label></div>
+            <div><input type="radio" id="hot" name="iceLevel" value="-100"><label for="hot">熱</label></div>
+        </div>
+
+        <!-- 備註 -->
+        <div class="section">
+            <div class="section-title">備註</div>
+            <input type="text">
         </div>
 
         <!-- 提交按鈕 -->
         <button class="submit-button">立即下單</button>
     </div>
 </body>
+
 </html>
