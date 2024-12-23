@@ -1,0 +1,173 @@
+//out: ../css/
+
+@vw: 15.19vw;
+
+.bag {
+	height: (150 / @vw);
+
+}
+
+.profileSteps {
+	float: left;
+	margin: (20/@vw) (20/@vw) 0 0;
+}
+
+.profileStep {
+	position: relative;
+	float: right;
+	width: (200 / @vw);
+	height: (50 / @vw);
+}
+
+.profileStep .connect {
+	position: absolute;
+	top: (10 / @vw);
+	left: 0;
+	width: (180 / @vw);
+	height: (10 / @vw);
+	margin-left: (-5 / @vw);
+	background-color: #ffbd59;
+	-webkit-border-radius: (5 / @vw);
+	border-radius: (5 / @vw);
+}
+
+.profileStep .icon {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: (30 / @vw);
+	height: (30 / @vw);
+	background-color: #ffbd59;
+	-webkit-border-radius: (15 / @vw);
+	border-radius: (15 / @vw);
+
+	color: #fff;
+	font-size: (16 / @vw);
+	line-height: (30 / @vw);
+	text-align: center;
+}
+
+.profileStep .info {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: (200 / @vw);
+
+	color: #000;
+	font-size: (16 / @vw);
+	line-height: (20 / @vw);
+	text-align: center;
+}
+
+.profileStepPassive .info {
+	color: #A5A5A5
+}
+
+.profileStepPassive .connect {
+	background-color: #f5f5f5;
+}
+
+.profileStepPassive .icon {
+	background-color: #f5f5f5;
+	color: #ffbd59;
+}
+
+.orderDetails {
+	width: 1200px;
+	display: flex;
+	height: 100vh;
+	// background-color: pink;
+
+	.left {
+		padding: 0 10%;
+		width: 50%;
+		height: 100%;
+		border-right: 5px solid #e6c7bd;
+
+		h3 {
+			font-size: (32/ @vw);
+			color: #737373;
+			// background-color: pink;
+		}
+		h4{
+			color: #737373;
+		}
+
+		ul {
+			li {
+				display: flex;
+				margin-top: (20 / @vw);
+				height: (80 / @vw);
+				border: 2px solid #dfd8d7;
+
+				.pic {
+					margin: (5 / @vw);
+					width: (70 / @vw);
+					height: (70 / @vw);
+
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+						border-radius: (10 / @vw);
+					}
+
+				}
+
+				.text {
+					flex: 1;
+
+					.item {
+						font-weight: 700;
+					}
+				}
+			}
+		}
+	}
+}
+
+.right {
+	padding: (60 / @vw) 5% 0 5%;
+	width: 50%;
+	height: auto;
+	// background-color: skyblue;
+
+	.userinfo {
+		padding: 0 10%;
+		width: 100%;
+		height: (300 / @vw);
+		border-bottom: (3 / @vw) solid #e6c7bd;
+
+		p {
+			padding-left: (10 / @vw);
+			margin-bottom: (20 / @vw);
+			height: (52 / @vw);
+			line-height: (52 / @vw);
+			border: (1 / @vw) solid #dfd8d7;
+		}
+	}
+
+	.checkout {
+		padding: 10% 10%;
+		width: 100%;
+		height: (200 / @vw);
+
+		// background-color: pink;
+		p {
+			margin-bottom: (15 / @vw);
+		}
+
+		.total {
+			display: flex;
+			justify-content: space-between;
+			height: (60 / @vw);
+
+			p {
+				font-size: (26 / @vw);
+				line-height: (60 / @vw);
+
+			}
+		}
+	}
+
+}

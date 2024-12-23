@@ -1,7 +1,7 @@
 const beforeLogin = `<button id="login-btn" type="button" class="login">登入</button>
                     <button id="signup-btn" type="button" class="signup">註冊</button>`;
 const afterLogin = `<a href="./shopcart.html"> <i class="bi-cart3"></i></a>
-                    <a href=""><i class="bi-bell"></i></a>
+                    <a href="/orderdetails.html"><i class="bi-bell"></i></a>
                     <a href=""><i class="bi-list"></i></a>`;
 
  let loggedIn = false;//定義登入狀態是否為true(預設為未登入)
