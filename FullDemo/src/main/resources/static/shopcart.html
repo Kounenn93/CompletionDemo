@@ -52,8 +52,8 @@
          <div class="content wrapper">
             <div class="left">
                 <h3>購物車</h3>
-                <ul>
-                    <li>
+                <ul id="cartContainer">
+                    <!-- <li>
                         <div class="pic">
                             <img src="./uploads/鮮茶道/item/class1/1.jpg" alt="">
                         </div>
@@ -112,32 +112,27 @@
                             <p class="details"><span>微糖 / 少冰 / $60 / 1份</span></p>
                             <p class="trash"><i class="bi-trash3"></i></p>
                         </div>
-                    </li>
-                    
-
+                    </li> -->
                 </ul>
             </div>
             <div class="right">
                 <div class="userinfo">
-                    <p class="name">姓　名：<span>王大明</span></p>
-                    <p class="phone">電　話：<span>0912345678</span></p>
-                    <p class="address">地　址：<span>桃園市楊梅區幼獅路二段3號</span></p>
-                    <p class="code">折扣碼：</p>
+                    <p class="name">姓　名：<input type="text" id="orderName" value="王大明"></p>
+                    <p class="phone">電　話：<input type="text" id="orderPhone" value="0912345678"></p>
+                    <p class="address">地　址：<input type="text" id="orderAddress" value="桃園市楊梅區幼獅路二段3號"></p>
+                    <p class="code">折扣碼：<input type="text" id="discountCode" value=""></p>
                 </div>
                 <div class="checkout">
-                    <p>小計： $<span>900</span> </p>
-                    <p>折扣： $<span>15</span> </p>
-                    <p>運費： $<span>50</span> </p>
+                    <p>小計： $<span id="subTotal">900</span> </p>
+                    <p>折扣： $<span id="discount">0</span> </p>
+                    <p>運費： $<span id="deliveryFee">0</span> </p>
                     <div class="total">
-                        <p>總計：$<span>935</span></p>                        
-                        <button>送出訂單</button>
-                    </div>
-                    
+                        <p>總計：$<span id="totalAmount">900</span></p>                        
+                        <button id="shopcartSubmit">送出訂單</button>
+                    </div>                    
 
                 </div>
-                <div class="amount"></div>
             </div>
-
          </div>
     </div>
 
@@ -164,6 +159,9 @@
             copyright © 11302JAVA班第3組
         </div>
     </div>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/shopcart.js"></script>
 
 </body>
 </html>

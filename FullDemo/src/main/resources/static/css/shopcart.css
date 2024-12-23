@@ -10,6 +10,7 @@
 }
 .content {
   display: flex;
+  height: 100vh;
 }
 .content .left {
   padding: 0 10%;
@@ -60,14 +61,22 @@
   padding: 0 10%;
   width: 100%;
   height: 19.74983542vw;
-  border-bottom: 3px solid #e6c7bd;
+  border-bottom: 0.19749835vw solid #e6c7bd;
 }
 .content .right .userinfo p {
   padding-left: 0.65832785vw;
   margin-bottom: 1.31665569vw;
+  height: 3.42330481vw;
+  line-height: 3.42330481vw;
+  border: 0.06583278vw solid #dfd8d7;
+}
+.content .right .userinfo p input {
+  font-size: 1.05332456vw;
+  font-weight: 700;
+  width: 80%;
   height: 3.29163924vw;
   line-height: 3.29163924vw;
-  border: 1px solid #dfd8d7;
+  background-color: transparent;
 }
 .content .right .checkout {
   padding: 10% 10%;

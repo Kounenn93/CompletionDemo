@@ -35,7 +35,7 @@ public class UsersController {
     @Autowired
     private UserSignupService userSignupService;
 
-    //註冊：限定只能以post方法（因為有密碼）
+    //註冊：限定只能以post方法（對應RESTful CREATE，另因有密碼[機敏資訊]）
     @PostMapping("/signup_request")
     public String register(@ModelAttribute CustUsers custUsers) {
 
@@ -60,12 +60,6 @@ public class UsersController {
         }
     }
 
-
-    // 注入JDBC工具
-    @Autowired
-    private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
-    @Autowired
-    private PasswordEncoder passwordEncoder;
 
     //消費者Login邏輯區
     @Autowired
